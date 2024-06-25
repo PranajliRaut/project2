@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>Person Form </title>
+{% endblock %}
+{% block content %}
+    <h1 class="text-center text-primary">Person Form</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"class="btn btn-outline-success clo-sm-5">Add Person</button>
+        <button type="reset"class="btn btn-outline-warning clo-sm-5 float-end">Reset</button>
+    </form>
+{% endblock %}
